@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = Everett::VERSION
   s.authors     = ["yasaichi"]
   s.email       = ["yasaichi@users.noreply.github.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Everett."
-  s.description = "TODO: Description of Everett."
+  s.homepage    = "https://github.com/yasaichi/everett"
+  s.summary     = "Simple observer for Rails 5 ActiveRecord"
+  s.description = "Everett is a simple observer for Rails 5 ActiveRecord."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
