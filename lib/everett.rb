@@ -1,0 +1,3 @@
+module Everett
+  # Your code goes here...
+end
