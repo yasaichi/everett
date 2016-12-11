@@ -20,5 +20,6 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency "pry-byebug"
   s.add_development_dependency "pry-coolline"
+  s.add_development_dependency "rspec-rails"
   s.add_development_dependency "sqlite3"
 end
