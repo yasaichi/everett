@@ -68,3 +68,7 @@ Gemfile.lock
 .rvmrc
 
 
+# RuboCop cache
+.rubocop-http*
+
+
