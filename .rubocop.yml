@@ -4,7 +4,6 @@ inherit_from:
 AllCops:
   Exclude:
     - Gemfile
-    - Rakefile
     - bin/*
     - spec/dummy/**/*
     - spec/rails_helper.rb
