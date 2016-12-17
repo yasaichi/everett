@@ -1,5 +1,6 @@
 require "everett/configuration"
 require "everett/observer"
+require "everett/subject"
 require "everett/utils"
 require "everett/version"
 
