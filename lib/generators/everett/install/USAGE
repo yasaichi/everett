@@ -1,0 +1,8 @@
+Description:
+    Create a Everett initializer
+
+Example:
+    rails generate everett:install
+
+    This will create:
+        config/initializers/everett.rb

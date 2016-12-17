@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   s.add_dependency "activerecord", "~> 5.0"
   s.add_dependency "railties", "~> 5.0"
 
+  s.add_development_dependency "ammeter"
   s.add_development_dependency "codeclimate-test-reporter", "~> 1.0"
   s.add_development_dependency "pry-byebug"
   s.add_development_dependency "pry-coolline"
