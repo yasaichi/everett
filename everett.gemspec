@@ -14,9 +14,10 @@ Gem::Specification.new do |s|
   s.description = "Everett is a simple observer for Rails 5 ActiveRecord."
   s.license     = "MIT"
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
+  s.files = Dir["lib/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
-  s.add_dependency "rails", "~> 5.0.0", ">= 5.0.0.1"
+  s.add_dependency "activerecord", "~> 5.0"
+  s.add_dependency "railties", "~> 5.0"
 
   s.add_development_dependency "codeclimate-test-reporter", "~> 1.0"
   s.add_development_dependency "pry-byebug"
