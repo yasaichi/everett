@@ -4,6 +4,10 @@ require "everett/subject"
 require "everett/utils"
 require "everett/version"
 
+if defined? Rails
+  require "everett/railtie"
+end
+
 module Everett
   class << self
     attr_writer :configuration
