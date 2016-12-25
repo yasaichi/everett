@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "codeclimate-test-reporter", "~> 1.0"
   s.add_development_dependency "pry-byebug"
   s.add_development_dependency "pry-coolline"
+  s.add_development_dependency "reek"
   s.add_development_dependency "rspec-rails"
   s.add_development_dependency "rubocop"
   s.add_development_dependency "simplecov"
