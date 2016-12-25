@@ -22,17 +22,18 @@ $ rails g everett:install
 They will install the initializer into `config/initializers/everett.rb`.
 
 ## Usage
+### Overview
 Observers allow you to implement trigger-like behavior outside the original classes.  
-You can put them anywhere, for example `app/observers/comment_observer.rb`:
+You can put them anywhere, for example `app/observers/contact_observer.rb`:
 
 ```ruby
-class CommentObserver < Everett::Observer
-  def after_create(comment)
-    Rails.logger.info("New comment was posted.")
+class ContactObserver < Everett::Observer
+  def after_create(contact)
+    Rails.logger.info('New contact added!')
   end
 
-  def after_destroy(comment)
-    Rails.logger.info("Comment with an id of #{comment.id} was destroyed.")
+  def after_destroy(contact)
+    Rails.logger.info("Contact with an id of #{contact.id} was destroyed!")
   end
 end
 ```
@@ -46,7 +47,7 @@ If you need to change this, or want to use one observer for several classes, use
 class NotificationsObserver < Everett::Observer
   observe :comment, :like
 
-  def after_create_commit(record)
+  def after_create(record)
     # notifiy users of new comment or like
   end
 end
@@ -56,8 +57,22 @@ Note that you must register observers first to activate them.
 This can be done by adding the following line into `config/initializers/everett.rb`:
 
 ```ruby
-config.observers = :comment_observer, :notifications_observer
+config.observers = :contact_observer, :notifications_observer
 ```
+
+### after\_{create,update,destroy}\_commit
+Since `after_create_commit`, `after_update_commit` and `after_destroy_commit` were introduced in Rails 5,
+you can also use them in observers:
+
+```ruby
+class CommentObserver < Everett::Observer
+  def after_create_commit(comment)
+    CommentMailer.notification(comment).deliver_now
+  end
+end
+```
+
+This observer sends an email after a record has been created.
 
 ## Contributing
 You should follow the steps below.
