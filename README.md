@@ -4,7 +4,7 @@
 [![Code Climate](https://codeclimate.com/github/yasaichi/everett/badges/gpa.svg)](https://codeclimate.com/github/yasaichi/everett)
 [![Test Coverage](https://codeclimate.com/github/yasaichi/everett/badges/coverage.svg)](https://codeclimate.com/github/yasaichi/everett/coverage)
 
-Everett is a simple observer for Rails 5 ActiveRecord.
+Everett is a substitute for `ActiveRecord::Observer` on Rails 5.
 
 ## Installation
 Put this in your Gemfile:
@@ -39,7 +39,7 @@ end
 
 This observer prints a log message when specific callbacks are triggered.
 
-Like [rails-observers](https://github.com/rails/rails-observers), the convention is to name observers after the class they observe.  
+Just like `ActiveRecord::Observer`, the convention is to name observers after the class they observe.  
 If you need to change this, or want to use one observer for several classes, use `observe`:
 
 ```ruby
