@@ -27,26 +27,41 @@ RSpec.describe Everett do
     let(:model_name) { "Foo" }
     let(:observer_class) { Object.const_get(observer_name) }
     let(:observer_name) { "#{model_name}Observer" }
-    let(:defined_method) { Everett::Subject::CALLBACKS.first }
 
     before do
-      stub_const model_name, class_spy(model_name)
+      stub_const model_name, Class.new(ApplicationRecord)
       stub_const observer_name, Class.new(Everett::Observer)
 
       observer_class.class_exec(defined_method) do |method_name|
-        define_method(method_name) {}
+        define_method(method_name) { |_record| }
       end
 
       described_class.configure do |config|
         config.observers = observer_name.underscore
       end
-
-      described_class.enable
     end
 
-    describe "observed models" do
-      subject { model_class }
-      it { is_expected.to have_received(defined_method).once }
+    describe "observers" do
+      subject { observer_class.instance }
+
+      before do
+        allow(subject).to receive(defined_method)
+        described_class.enable
+      end
+
+      context "when an instance of observerd models is initialized" do
+        let(:defined_method) { :after_initialize }
+        let!(:model_instance) { model_class.new }
+
+        it { is_expected.to have_received(defined_method).with(model_instance).once }
+      end
+
+      context "when a record of observerd models is created" do
+        let(:defined_method) { :after_create_commit }
+        let!(:model_instance) { model_class.create! }
+
+        it { is_expected.to have_received(defined_method).with(model_instance).once }
+      end
     end
 
     after do
