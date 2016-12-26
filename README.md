@@ -74,6 +74,31 @@ end
 
 This observer sends an email after a record has been created.
 
+## Migration from rails-observers
+Since Everett is highly compatible with `ActiveRecord::Observer`,
+you can easily migrate from [rails-observers](https://github.com/rails/rails-observers).  
+All you need to do is as follows:
+
+### 1. Replace `ActiveRecord::Observer` with `Everett::Observer`
+
+```diff
+-class ContactObserver < ActiveRecord::Observer
++class ContactObserver < Everett::Observer
+```
+
+### 2. Register observers in `config/initializers/everett.rb`
+
+```diff
+# config/application.rb
+-config.active_record.observers = :contact_observer, :notifications_observer
+
+# config/initializers/everett.rb
++config.observers = :contact_observer, :notifications_observer
+```
+
+### 3. Check the test suite passes
+If you find any bugs, please document them on [the issues page](https://github.com/yasaichi/everett/issues).
+
 ## Contributing
 You should follow the steps below.
 
