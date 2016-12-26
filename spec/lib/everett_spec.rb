@@ -46,7 +46,7 @@ RSpec.describe Everett do
 
     describe "observed models" do
       subject { model_class }
-      it { is_expected.to have_received(defined_method).once.with(observer_class.instance) }
+      it { is_expected.to have_received(defined_method).once }
     end
 
     after do
