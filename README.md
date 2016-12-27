@@ -29,11 +29,11 @@ You can put them anywhere, for example `app/observers/contact_observer.rb`:
 ```ruby
 class ContactObserver < Everett::Observer
   def after_create(contact)
-    Rails.logger.info('New contact added!')
+    Rails.logger.info('New contact has been added!')
   end
 
   def after_destroy(contact)
-    Rails.logger.info("Contact with an id of #{contact.id} was destroyed!")
+    Rails.logger.info("Contact with an id of #{contact.id} has been destroyed!")
   end
 end
 ```
