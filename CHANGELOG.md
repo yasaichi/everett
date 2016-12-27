@@ -1,4 +1,8 @@
 # CHANGELOG
+## [0.2.2](https://github.com/yasaichi/everett/releases/tag/v0.2.2) (December 27, 2016)
+* [Fix bug of after\_{create,update,destroy}\_commit callbacks](https://github.com/yasaichi/everett/pull/3)
+* Minor fix on README
+
 ## [0.2.1](https://github.com/yasaichi/everett/releases/tag/v0.2.1) (December 26, 2016)
 * Improve the gem summary, description and README
 * Add CHANGELOG
