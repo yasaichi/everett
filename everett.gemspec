@@ -10,8 +10,8 @@ Gem::Specification.new do |s|
   s.authors     = ["yasaichi"]
   s.email       = ["yasaichi@users.noreply.github.com"]
   s.homepage    = "https://github.com/yasaichi/everett"
-  s.summary     = "Substitute for ActiveRecord::Observer on Rails 5"
-  s.description = "Everett is a substitute for ActiveRecord::Observer on Rails 5."
+  s.summary     = "Substitute for Active Record Observer on Rails 5"
+  s.description = "Everett is a substitute for Active Record Observer on Rails 5."
   s.license     = "MIT"
 
   s.files = Dir["CHANGELOG.md", "lib/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
