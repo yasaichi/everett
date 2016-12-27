@@ -79,14 +79,14 @@ Since Everett is highly compatible with `ActiveRecord::Observer`,
 you can easily migrate from [rails-observers](https://github.com/rails/rails-observers).  
 All you need to do is as follows:
 
-### 1. Replace `ActiveRecord::Observer` with `Everett::Observer`
+### 1. Replace ActiveRecord::Observer with Everett::Observer
 
 ```diff
 -class ContactObserver < ActiveRecord::Observer
 +class ContactObserver < Everett::Observer
 ```
 
-### 2. Register observers in `config/initializers/everett.rb`
+### 2. Register observers in config/initializers/everett.rb
 
 ```diff
 # config/application.rb
