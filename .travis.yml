@@ -6,5 +6,9 @@ rvm:
 branches:
   only:
     - master
+env:
+  - RAILS_ENV=test
+before_script:
+  - (cd spec/dummy && bin/rails db:setup)
 after_script:
   - '[ ${TRAVIS_EVENT_TYPE} != "pull_request" ] && [ ${TRAVIS_BRANCH} = "master" ] && bundle exec codeclimate-test-reporter'

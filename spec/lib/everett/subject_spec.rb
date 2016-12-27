@@ -79,7 +79,7 @@ describe Everett::Subject do
 
       context "when the observer isn't added yet" do
         it "should return true, and the instance is used to set callbacks" do
-          expect(model_class).to receive(defined_method).once.with(observer)
+          expect(model_class).to receive(defined_method).and_yield.once
           expect(subject).to eq true
         end
       end
