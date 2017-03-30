@@ -104,7 +104,7 @@ You should follow the steps below.
 
 1. [Fork the repository](https://help.github.com/articles/fork-a-repo/)
 2. Create a feature branch: `git checkout -b add-new-feature`
-3. Commit your changes: `git commit -am 'add new feature'`
+3. Commit your changes: `git commit -am 'Add new feature'`
 4. Push the branch: `git push origin add-new-feature`
 4. [Send us a pull request](https://help.github.com/articles/about-pull-requests/)
 
