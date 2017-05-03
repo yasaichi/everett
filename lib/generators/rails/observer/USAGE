@@ -1,0 +1,10 @@
+Description:
+    Stubs out a new observer. Pass the observer name, either CamelCased or
+    under_scored, as an argument.
+
+Example:
+    `rails generate observer Account`
+
+    This will create:
+        app/models/account_observer.rb
+        test/unit/account_observer_test.rb (as needed)

@@ -26,9 +26,7 @@ RSpec.describe Everett::Generators::InstallGenerator, type: :generator do
         \Z/mx
       end
 
-      it { is_expected.to exist }
-      it { is_expected.to have_correct_syntax }
-      it { is_expected.to contain expected_content }
+      it { is_expected.to exist & have_correct_syntax & contain(expected_content) }
     end
   end
 

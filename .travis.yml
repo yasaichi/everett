@@ -3,6 +3,9 @@ language: ruby
 rvm:
   - 2.2.6
   - 2.3.3
+gemfile:
+  - gemfiles/rails_5_0.gemfile
+  - gemfiles/rails_5_1.gemfile
 branches:
   only:
     - master
