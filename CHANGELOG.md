@@ -1,4 +1,7 @@
 # CHANGELOG
+## [0.3.0](https://github.com/yasaichi/everett/releases/tag/v0.3.0) (May 4, 2017)
+* [Implement generators to create a new observer and its test](https://github.com/yasaichi/everett/pull/5)
+
 ## [0.2.2](https://github.com/yasaichi/everett/releases/tag/v0.2.2) (December 27, 2016)
 * [Fix bug of after\_{create,update,destroy}\_commit callbacks](https://github.com/yasaichi/everett/pull/3)
 * Minor fix on README
