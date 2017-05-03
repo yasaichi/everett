@@ -1,8 +1,8 @@
 Description:
-    Create a Everett initializer
+    Creates an Everett initializer.
 
 Example:
-    rails generate everett:install
+    `rails generate everett:install`
 
     This will create:
         config/initializers/everett.rb
