@@ -24,7 +24,7 @@ They will install the initializer into `config/initializers/everett.rb`.
 ## Usage
 ### Overview
 Observers allow you to implement trigger-like behavior outside the original classes.  
-You can put them anywhere, for example `app/observers/contact_observer.rb`:
+You can put them anywhere, for example `app/models/contact_observer.rb`:
 
 ```ruby
 class ContactObserver < Everett::Observer
