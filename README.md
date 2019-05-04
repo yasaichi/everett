@@ -1,4 +1,5 @@
 # Everett
+
 [![Gem Version](https://badge.fury.io/rb/everett.svg)](http://badge.fury.io/rb/everett)
 [![Build Status](https://travis-ci.org/yasaichi/everett.svg?branch=master)](https://travis-ci.org/yasaichi/everett)
 [![Code Climate](https://codeclimate.com/github/yasaichi/everett/badges/gpa.svg)](https://codeclimate.com/github/yasaichi/everett)
@@ -7,6 +8,7 @@
 Everett is a substitute for Active Record Observer on Rails 5.
 
 ## Installation
+
 Put this in your Gemfile:
 
 ```ruby
@@ -22,7 +24,9 @@ $ rails g everett:install
 They will install the initializer into `config/initializers/everett.rb`.
 
 ## Usage
+
 ### Overview
+
 Observers allow you to implement trigger-like behavior outside the original classes.  
 You can put them anywhere, for example `app/models/contact_observer.rb`:
 
@@ -61,6 +65,7 @@ config.observers = :contact_observer, :notifications_observer
 ```
 
 ### after\_{create,update,destroy}\_commit
+
 Since `after_create_commit`, `after_update_commit` and `after_destroy_commit` were introduced in Rails 5,
 you can also use them in observers:
 
@@ -75,6 +80,7 @@ end
 This observer sends an email after a record has been created.
 
 ## Migration from rails-observers
+
 Since Everett is highly compatible with Active Record Observer,
 you can easily migrate from [rails-observers](https://github.com/rails/rails-observers).  
 All you need to do is as follows:
@@ -93,20 +99,25 @@ All you need to do is as follows:
 -config.active_record.observers = :contact_observer, :notifications_observer
 
 # config/initializers/everett.rb
-+config.observers = :contact_observer, :notifications_observer
++Everett.configure do |config|
++  config.observers = :contact_observer, :notifications_observer
++end
 ```
 
 ### 3. Check the test suite passes
+
 If you find any bugs, please document them on [the issues page](https://github.com/yasaichi/everett/issues).
 
 ## Contributing
+
 You should follow the steps below.
 
 1. [Fork the repository](https://help.github.com/articles/fork-a-repo/)
 2. Create a feature branch: `git checkout -b add-new-feature`
 3. Commit your changes: `git commit -am 'Add new feature'`
 4. Push the branch: `git push origin add-new-feature`
-4. [Send us a pull request](https://help.github.com/articles/about-pull-requests/)
+5. [Send us a pull request](https://help.github.com/articles/about-pull-requests/)
 
 ## License
+
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
