@@ -1,11 +1,21 @@
 sudo: false
 language: ruby
 rvm:
-  - 2.2.6
-  - 2.3.3
+  - 2.2.10
+  - 2.3.8
+  - 2.4.6
+  - 2.5.5
+  - 2.6.3
 gemfile:
   - gemfiles/rails_5_0.gemfile
   - gemfiles/rails_5_1.gemfile
+  - gemfiles/rails_5_2.gemfile
+matrix:
+  exclude:
+    - rvm: 2.5.5
+      gemfile: gemfiles/rails_5_0.gemfile
+    - rvm: 2.6.3
+      gemfile: gemfiles/rails_5_0.gemfile
 branches:
   only:
     - master
