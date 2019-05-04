@@ -25,3 +25,7 @@ before_script:
   - (cd spec/dummy && bin/rails db:setup)
 after_script:
   - '[ ${TRAVIS_EVENT_TYPE} != "pull_request" ] && [ ${TRAVIS_BRANCH} = "master" ] && bundle exec codeclimate-test-reporter'
+notifications:
+  email: false
+  slack:
+    secure: "T+OlLgNKyjTkPgEotnhENJQZtKx0/ZqmsZEbdRqjK6XqvGLg1hc1d3Hpan4JEZja/SldhiEthIJfPITb3OkNeHuBQq+dR2AcXwTZWxkHSXAhuAawyawATgS3A1acxDyh05GGK5my2SBweBF0xvrhK2lAYV/egpXCodCgZswQ7HGuiu9QHqP7k3sipYeEjPuLUf8klmf6DqgPjuacxwRsQKpJGtBcmplFquU7eguBgNks+06oPWjlU0+OHkA6svojiqyKu+CxzWOiTbNebTtxANX4rhDjelrzW85bwGgoehE2v8LbAgd8NIZGYRMDObkvRgM7ucTlNcSTGVzaEIjLsGk0ajDpwPxUVuDI+MKHHTvkC4eT2SeJIQR1kwOTjYViVEC+eDfQYtBHbZHSbSq6QtOFhWeVvkiwV61wlQtLRFcIU/l6RtKQ2JWE45hUvmM4VCecW/BzCReIM0J6ScNgLqy+BDNRsbNYXfXG+1bssgKB6ZaX/n9Nn92LYGGhIzPVD057YRqQBtBvN9tjcjoXjnHNerukGeNVVRKLDqOycwtgzEWjUPsDjrM2BYeYO3T8e1K/I+vOCI1S8UjRiAMsCqoIhhuWEFlIwwlUNZepabWVccbDkYT3UauKFdnZZ30yq6cazNUOq95JMgIe2V4WJJad4r2eAQttq7gKQzyS4rs="
