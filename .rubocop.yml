@@ -1,5 +1,5 @@
 inherit_from:
-  - https://raw.githubusercontent.com/rails/rails/master/.rubocop.yml
+  - https://raw.githubusercontent.com/rails/rails/v6.0.0.rc1/.rubocop.yml
 
 AllCops:
   Exclude:
@@ -14,5 +14,5 @@ LineLength:
 Style/Documentation:
   Enabled: false
 
-Style/IndentationConsistency:
+Layout/IndentationConsistency:
   EnforcedStyle: normal
